@@ -8,7 +8,13 @@ var scriptFiles = './src/**/*.js';
 gulp.task('buildJs', function() {
   gulp.src('./src/main.js')
     .pipe(g.browserify({
-      //transform: [require('browserify-es6')]
+      shim: {
+        coquette: {
+          path: 'node_modules/coquette/coquette.js',
+          exports: 'Coquette'
+        }
+      },
+      transform: [require('browserify-es6-modules')],
     }))
     .pipe(gulp.dest('./tmp'));
 });

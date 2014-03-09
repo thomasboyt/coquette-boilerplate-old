@@ -9,5 +9,4 @@ ExampleEntity.prototype.draw = function(ctx) {
   ctx.fillText(this.text, 250, 250);
 };
 
-//export default ExampleEntity;
-module.exports = ExampleEntity;
+export default ExampleEntity;

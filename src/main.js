@@ -1,13 +1,10 @@
-/*import ExampleEntity from "./example-entity";
+import ExampleEntity from "./example-entity";
 
-import {Coquette} from 'coquette/src/main';
-*/
-
-var ExampleEntity = require('./example-entity');
-var coquette = require('coquette/src/main');
+// require is used for an out-of-system import
+var Coquette = require('coquette');
 
 var Game = function(canvasId, width, height) {
-  window.coq = new coquette.Coquette(this, canvasId, width, height, "#000");
+  window.coq = new Coquette(this, canvasId, width, height, "#000");
 
   coq.entities.create(ExampleEntity, {
     text: "Hello world!"
