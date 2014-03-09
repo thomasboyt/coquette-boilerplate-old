@@ -3,9 +3,12 @@
   "devDependencies": {
     "gulp-util": "~2.2.14",
     "gulp": "~3.5.2",
-    "gulp-es6-module-transpiler": "~0.1.0",
     "gulp-concat": "~2.1.7",
     "gulp-connect": "~0.4.0",
-    "gulp-load-plugins": "~0.3.0"
+    "gulp-load-plugins": "~0.3.0",
+    "gulp-browserify": "~0.4.6"
+  },
+  "dependencies": {
+    "coquette": "~0.3.1"
   }
 }

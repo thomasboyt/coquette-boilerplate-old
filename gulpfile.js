@@ -6,14 +6,10 @@ var g = require('gulp-load-plugins')();
 var scriptFiles = './src/**/*.js';
 
 gulp.task('buildJs', function() {
-  gulp.src('./src/**/*.js')
-    .pipe(g.es6ModuleTranspiler({
-      type: 'amd',
-      moduleName: function(path) {
-        return require('./package.json').name + '/' + path;
-      }
+  gulp.src('./src/main.js')
+    .pipe(g.browserify({
+      //transform: [require('browserify-es6')]
     }))
-    .pipe(g.concat('game.js'))
     .pipe(gulp.dest('./tmp'));
 });
 
